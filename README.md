@@ -20,7 +20,7 @@ O projeto está dividido em pastas para facilitar a navegação:
 
 ---
 
-**Gabriel Siqueira** *Estudante de TI no SENAC*
+*Estudante de TI no SENAC*
 
 ---
 
