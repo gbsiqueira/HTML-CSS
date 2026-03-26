@@ -20,8 +20,6 @@ O projeto está dividido em pastas para facilitar a navegação:
 
 ---
 
-## 👨‍💻 Autor
-
 **Gabriel Siqueira** *Estudante de TI no SENAC*
 
 ---
