@@ -132,32 +132,93 @@
 
         </section>
         <!-- tabela de pontuação -->
-         <h2>
-            Tabela de Pontuação
-         </h2>
-         <!-- tag table, e utilizada como uma tabela, border e uma borda para ficar com mais cara de tabela mesmo, tr seria uma linha dessa tabela, ja td seria uma informação para essa linha. -->
-         <table border="1"
-            <tr>
-                <td>0-2</td>
-                <td>Não desista! cada tentativa e uma oportunidade de aprender.</td>
-            </tr>
-            <tr>
-                <td>3-4</td>
-                <td>Você ainda precisa melhorar, que tal estudar ,mais sobre programação!</td>
-            </tr>
-            <tr>
-                <td>5-7</td>
-                <td>bom! seu conhecimento em programação esta satisfatorio.</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Perfeito! Você esta muito bem informado sobre Programação.</td>
-            </tr>
-         </table>
+        <section>
+            <h2>
+                Tabela de Pontuação
+            </h2>
+            <!-- tag table, e utilizada como uma tabela, border e uma borda para ficar com mais cara de tabela mesmo, tr seria uma linha dessa tabela, ja td seria uma informação para essa linha. thead seria como o cabeçalho da tabela, th seria um alinha para o cabeçalho, tbody seria o conteúdo do cabeçalho, tfoot rodape. td colspan é o numero de colunas que eu quero ocupar.  -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Pontuação</th>
+                        <th>Avaliação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>0-2</td>
+                        <td>Não desista! cada tentativa e uma oportunidade de aprender.</td>
+                    </tr>
+                    <tr>
+                        <td>3-4</td>
+                        <td>Você ainda precisa melhorar, que tal estudar ,mais sobre programação!</td>
+                    </tr>
+                    <tr>
+                        <td>5-7</td>
+                        <td>bom! seu conhecimento em programação esta satisfatorio.</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Perfeito! Você esta muito bem informado sobre Programação.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Boa sorte na proxima! estude mais para melhorar.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <!-- lista de respotas -->
+        <section>
+            <h2>Verifique suas Respostas</h2>
+            <!-- details serve para a pessoa ver o conteudo apenas quando clicar na setinha, summary e para mudar o nome ao lado da setinha, ol e li seria a lista e seus itens. -->
+            <details>
+                <summary>Clique aqui para ver as respostas do quiz!</summary>
+                <ol>
+                    <li>HTML</li>
+                    <li>Domínio</li>
+                    <li>abh38#hd3</li>
+                    <li>1991</li>
+                    <li>Java, Javascript</li>
+                    <li>Arquivo deve ter extensão .html</li>
+                    <li>type</li>
+                    <li>Java</li>
+                </ol>
+            </details>
+        </section>
+        <!-- Formulario de feedback -->
+        <section>
+            <h2>Nos dê o seu feedback</h2>
+            <!-- textarea seria uma area feita para comentarios assim como o type email, os rows seriam as linhas da caixa dos comentarios, e cols as colunas, fieldset uma area para um formulario mais bonito, legend e a legenda do fieldset. -->
+            <form>
+                <fieldset>
+                    <legend>Informações para contato</legend>
+                    <label for="Nomeuser">Digite aqui o seu nome:</label>
+                    <input type="text" name="NomedaPessoa" id="Nomeuser"><br><br>
+
+                    <label for="Emailuser">Digite seu e-mail:</label>
+                    <input type="email" name="Emailpessoa" id="Emailuser"><br><br>
+
+                    <label for="Comentarios">Comentários:</label><br>
+                    <textarea name="comentarios" id="Comentarios" rows="3" cols="50"
+                        placeholder="Digite seus comentários aqui">
+                    </textarea>
+                </fieldset>
+            </form>
+        </section>
     </main>
 
     <footer>
-
+        <!-- &copy e o simbolo de copyright, palavras como link tag a, target blank faz abrir outra página ao clicar no link. -->
+        <p>
+            &copy; Quiz de programadores. Todos os direitos Reservados 
+        </p>
+        <p>
+            Para ver outros quizzes <a href="paginaaula.html" target="_blank">clique aqui</a>
+        </p>
     </footer>
 </body>
 
