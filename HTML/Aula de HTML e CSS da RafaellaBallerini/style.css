@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
-*
-{
-     /* remover a margem que tem no html puro */
+* {
+    /* remover a margem que tem no html puro */
     margin: 0;
-    padding: 0; 
+    padding: 0;
     box-sizing: border-box;
 }
 
-body
-{
+body {
     /* cor do fundo  */
     background-color: #F4F0EA;
     /* cor das palavras  */
     color: #798252;
     /* mudando a fonte  */
-    font-family: "Google Sans",sans-serif;
+    font-family: "Google Sans", sans-serif;
     /* peso da fonte  */
     font-weight: 400;
 }
 
-header
-{
+header {
     /* criando uma borda */
     padding: 2rem;
     /* mudando a cor do fundo do header  */
@@ -31,8 +28,7 @@ header
 
 }
 
-main
-{
+main {
     padding: 2rem;
     /* flex box  */
     display: flex;
@@ -42,33 +38,35 @@ main
     gap: 1.5rem;
 }
 
-section
-{
+section {
     /* flex box */
     display: flex;
     /* alinhando em colunas */
     flex-direction: column;
     /* espaçamento  */
     gap: 1rem;
-    
+
 }
 
-h2
-{
+h2 {
     /* cor das palavras */
     color: #331f19;
     /* tamanho da fonte  */
     font-size: 1.2rem;
 }
+
 /* muda os input do tipo radio e checkbox */
-input[type="radio"],input[type="checkbox"]
-{
+input[type="radio"],
+input[type="checkbox"] {
     /* mudar a cor dos rd */
     accent-color: #ccd595;
 }
+
 /* tipo texto agora */
-input[type="text"], input[type="password"], input[type="date"], input[type="email"]
-{
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"] {
     /* largura */
     width: 100%;
     padding: 0.6rem;
@@ -81,15 +79,14 @@ input[type="text"], input[type="password"], input[type="date"], input[type="emai
     /* fundo da text */
     background-color: transparent;
 }
+
 /* mudando o place holder */
-input::placeholder
-{ 
+input::placeholder {
     /* cor  */
     color: #cbbba7;
 }
 
-select
-{
+select {
     /* mudar o tipo do cursor */
     cursor: pointer;
     /* cor do fundo */
@@ -102,11 +99,51 @@ select
     border: none;
     outline: none;
 }
+
 /* estilizando imagem */
-img
-{
+img {
     /* largura */
     width: 5rem;
     /* arredondar borda */
     border-radius: 5px;
 }
+
+/* estilizando a tabela */
+table {
+    /* ocupar todo espaço disponivel  */
+    width: 100%;
+    /* borda normal */
+    border-collapse: collapse;
+}
+
+th {
+    /* cor do fundo  */
+    background-color: #ccd595;
+    /* cor das palavras  */
+    color: #331f19;
+    /* espaçamento */
+    padding: 1rem;
+}
+
+td {
+    /* cor do texto  */
+    color: #331f19;
+    /* espaçamento */
+    padding: 1rem;
+    /* alinhar o texto no centro */
+    text-align: center;
+
+}
+
+tfoot td
+{
+    /* cor do fundo */
+    background-color: #331f19;
+    /* cor do texto  */
+    color: #F4F0EA;
+    
+}
+
+
+
+
