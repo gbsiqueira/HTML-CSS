@@ -10,8 +10,24 @@
 
 body
 {
+    /* cor do fundo  */
     background-color: #F4F0EA;
+    /* cor das palavras  */
     color: #798252;
+    /* mudando a fonte  */
     font-family: "Google Sans",sans-serif;
+    /* peso da fonte  */
+    font-weight: 400;
+}
+
+header
+{
+    /* criando uma borda */
+    padding: 2rem;
+    /* mudando a cor do fundo do header  */
+    background-color: #331f19;
+    /* denxando centralizado */
+    text-align: center;
+    
 }
 
