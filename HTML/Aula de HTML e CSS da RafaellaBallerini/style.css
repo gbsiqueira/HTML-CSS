@@ -222,3 +222,26 @@ button
     cursor: pointer;
 }
 
+footer
+{
+    /* cor do fundo  */
+    background-color: #331f19;
+    /* espaçamento  */
+    padding: 2rem;
+    /* alinhar o texto no centro */
+    text-align: center;
+}
+
+.paragrafofooter
+{
+    /* cor  */
+    color: #F4F0EA;
+}
+
+a
+{
+    /* tirar a decoração */
+    text-decoration: none;
+    /* cor  */
+    color: #ccd595;
+}
