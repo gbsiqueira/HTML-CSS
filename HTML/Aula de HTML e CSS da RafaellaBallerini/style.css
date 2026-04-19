@@ -28,6 +28,62 @@ header
     background-color: #331f19;
     /* denxando centralizado */
     text-align: center;
+
+}
+
+main
+{
+    padding: 2rem;
+    /* flex box  */
+    display: flex;
+    /* alinhando em colunas  */
+    flex-direction: column;
+    /* dando espaço entre as perguntas */
+    gap: 1.5rem;
+}
+
+section
+{
+    /* flex box */
+    display: flex;
+    /* alinhando em colunas */
+    flex-direction: column;
+    /* espaçamento  */
+    gap: 1rem;
     
 }
 
+h2
+{
+    /* cor das palavras */
+    color: #331f19;
+    /* tamanho da fonte  */
+    font-size: 1.2rem;
+}
+/* muda os input do tipo radio e checkbox */
+input[type="radio"],input[type="checkbox"]
+{
+    /* mudar a cor dos rd */
+    accent-color: #ccd595;
+}
+/* tipo texto agora */
+input[type="text"], input[type="password"], input[type="date"], input[type="email"]
+{
+    /* largura */
+    width: 100%;
+    padding: 0.6rem;
+    /* borda */
+    border: 2px solid #ccd595;
+    /* tirando o outline */
+    outline: none;
+    /* arredondando a borda  */
+    border-radius: 5px;
+    /* fundo da text */
+    background-color: transparent;
+}
+/* mudando o place holder */
+input::placeholder
+{ 
+    /* cor  */
+    color: #cbbba7;
+}
