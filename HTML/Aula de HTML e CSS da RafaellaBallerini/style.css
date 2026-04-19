@@ -144,6 +144,54 @@ tfoot td
     
 }
 
+details
+{
+    /* cor do fundo  */
+    background-color: #ccd595;
+    /* arredondar borda  */
+    border-radius: 5px;
+    /* espaçamento  */
+    padding: 1rem;
+}
 
+summary
+{
+    /* cor do texto  */
+    color: #331f19;
+    /* margem  */
+    margin: 0.5rem;
+    /* tipo do cursor  */
+    cursor: pointer;
+}
+
+ol
+{
+    /* margem para a esquerda  */
+    margin-left: 1.5rem;
+}
+
+ol li
+{
+    /* espaçamento  */
+    padding: 0.2rem;
+}
+
+fieldset
+{
+    /* borda */
+    border: 2px solid #ccd595;
+    /* arredondando a aborda */
+    border-radius: 5px;
+    /* espaçamento  */
+    padding: 1rem;
+}
+
+legend
+{
+    /* cor do texto  */
+    color: #331f19;
+    /* espaçamento  */
+    padding: 0 0.5rem;
+}
 
 
