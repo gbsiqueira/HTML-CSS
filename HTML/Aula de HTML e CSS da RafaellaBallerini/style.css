@@ -87,3 +87,26 @@ input::placeholder
     /* cor  */
     color: #cbbba7;
 }
+
+select
+{
+    /* mudar o tipo do cursor */
+    cursor: pointer;
+    /* cor do fundo */
+    background-color: #ccd595;
+    /* cor das palavras */
+    color: #331f19;
+    /* arredondar borda */
+    border-radius: 5px;
+    /* removendo a borda */
+    border: none;
+    outline: none;
+}
+/* estilizando imagem */
+img
+{
+    /* largura */
+    width: 5rem;
+    /* arredondar borda */
+    border-radius: 5px;
+}
