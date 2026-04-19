@@ -205,4 +205,20 @@ textarea
     /* cor do fundo transparente */
     background-color: transparent;
 }
+/* botao  */
+button
+{
+    /* cor do fundo  */
+    background-color: #ccd595;
+    /* retirando a borda */
+    border: none;
+    /* espaçamento */
+    padding: 0.8rem;
+    /* cor do texto  */
+    color: #331f19;
+    /* arredondar a borda */
+    border-radius: 5px;
+    /* estilo do cursor */
+    cursor: pointer;
+}
 
