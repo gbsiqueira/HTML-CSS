@@ -194,4 +194,15 @@ legend
     padding: 0 0.5rem;
 }
 
+textarea
+{
+    /* tirar a linha azul  */
+    outline: none;
+    /* arrendondar borda  */
+    border-radius: 5px;
+    /* borda */
+    border: 2px solid #ccd595;
+    /* cor do fundo transparente */
+    background-color: transparent;
+}
 
