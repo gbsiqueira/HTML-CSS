@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* aplicar o padding sem mexer no widht dos elementos */
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  /* mudando a fonte do corpo */
+  font-family: 'poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'kanit', sans-serif;
+}
+
+/* CLASSES GERAIS */
+.container {
+  width: 98%;
+  /* nunca vai pode passar de 1200, vai ser o maximo */
+  max-width: 1200px;
+  /* altura automatica */
+  height: auto;
+  /* centralizar na tela */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.degrade
+{
+  /* PARA AS LETRAS/PALAVRAS */
+  /* o gradiente */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  /* recortar e deixar apenas nas letras */
+  background-clip: text;
+  /* segunda maneira pois em alguns navegadores pode bugar */
+  -webkit-background-clip: text;
+  /* cor de preenchimento do texto, deixar transparente */
+  -webkit-text-fill-color: transparent;
+}
+
+/* CABEÇALHO */
+#topo {
+  /* ocupa todo o tamanho */
+  width: 100%;
+  /* espaçar mais em cima */
+  padding: 10px;
+  /* fazer o banner passar por tras dos menus */
+  position: fixed;
+}
+
+#logo {
+  font-family: 'kanit', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+
+#logo a {
+  color: #ffffff;
+}
+
+#navegacao {
+  /* ocultar a versao desktop para não aparecer no mobile */
+  display: none;
+}
+
+#menumobile {
+  width: 90%;
+  height: 40px;
+  text-align: center;
+  margin: 5px auto;
+  /* muda o display pra ele aceitar a margin, ou block ou flex*/
+  display: block;
+}
+
+/* BANNER */
+
+#banner {
+  /* a cor para criar o efeito de sobreposição */
+  /* center centraliza na horizontal */
+  /* chama background que da para chamar varias propriedades de uma vez */
+  /* url chama imagem */
+  background: #333 url(../../assets/img/banner.jpg) center;
+  /* imagem preencher o elemento completamente */
+  background-size: cover;
+  /* mesclar cor e imagem */
+  background-blend-mode: overlay;
+  padding: 150px 0 60px;
+  text-align: center;
+}
+
+#banner h1 {
+  /* color: #fff; COMENTEI POR CAUSA DO GRADIENTE/DEGRADE */
+  text-transform: uppercase;
+  font-size: 35px;
+  /* ajustar o espaçamento da linha da frase, ideal usar do tmanho da fonte  */
+  line-height: 35px;
+  /* dar o espaçamento, pro botão de baixo não ficar muito colado */
+  margin-bottom: 30px;
+}
+
+.btn 
+{
+  /* EM UMA IMAGEM */
+  /* deixar meio que um degrade nas cores */
+  /* deg controla o angulo que seu gradient começa */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  /* o tamanho depende do conteudo que tem dentro do botão */
+  width: fit-content;
+  /* espaçamento para não fcar muito colado */
+  padding: 10px 20px;
+  border-radius: 8px;
+  /* centralizar o botão */
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tem que ficar no final */
+/* com esse tamanho ele ignora os outros comandos css, e passa a obedecer o que esta nas chaves */
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+
+  /* CABEÇALHO */
+  #logo {
+    width: 25%;
+    text-align: left;
+  }
+
+  #menumobile {
+    display: none;
+  }
+
+  #navegacao {
+    display: flex;
+    gap: 25px;
+    /* Negrito */
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .linkmenu {
+    color: #fff;
+  }
+
+  #topo nav {
+    display: flex;
+    /* jogar o menu para o lado direito */
+    justify-content: space-between;
+    /* colocar na mesma linha */
+    align-items: center;
+  }
+
+  /* BANNER */
+  #banner h1 {
+    font-size: 75px;
+    /* espaçamento entre a linha da frase */
+    line-height: 75px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+
+  /* BANNER */
+  #banner h1 {
+    font-size: 96px;
+    /* espaçamento entre a linha da frase */
+    line-height: 96px;
+  }
+}
