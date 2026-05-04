@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula da Rafaella</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+
+<body>
+    <header>
+        <h1>Quiz interativo para programadores</h1>
+        <p>
+            teste seus conhecimentos em programação e veja sua pontuação
+        </p>
+
+    </header>
+
+    <main>
+        <!-- introdução -->
+        <section>
+            <h2>sobre esse quiz</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex esse consequatur distinctio eaque. At unde,
+                itaque eum magnam ipsum aliquam!
+            </p>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed dicta molestias velit repellendus in
+                dignissimos odio, voluptas hic ad iusto ipsa accusamus perspiciatis, porro, doloremque accusantium
+                explicabo! Unde, similique et?
+            </p>
+
+        </section>
+        <!-- pergunta 1: multipla escolha -->
+        <section>
+            <h2>Pergunta 1: Qual linguagem e usada para estururar Páginas web?</h2>
+            <!-- type seria o tipo da escola, entao radio de radio button, valor seria a resposta que ela vale, id provavelmente identificação para o CSS e name para saber que eles sao da mesma pergunta e nao deixar eu escolher mais de uma opção, label e para colocar o nome na frente do rd button -->
+            <form>
+                <input type="radio" value="python" id="p1a" name="pergunta1">
+                <label for="p1a">Python</label><br>
+
+                <input type="radio" value="Java" id="p1b" name="pergunta1">
+                <label for="p1b">Java</label><br>
+
+                <input type="radio" value="C#" id="p1c" name="pergunta1">
+                <label for="p1c">C#</label><br>
+
+                <input type="radio" value="HTML" id="p1d" name="pergunta1">
+                <label for="p1d">HTML</label><br>
+
+
+            </form>
+
+        </section>
+        <!-- pergunta 2:Texto -->
+        <section>
+            <h2>Pergunta 2: Na URL https://www.google.com o trecho "google.com" é o _____</h2>
+            <!-- input tipo text, ja deixa uma textbox para ser preenchida, placeholder deixa um texto escrito na sua caixa, bem fraco. -->
+            <form> <input type="text" name="pergunta2" id="pt2" placeholder="Digite sua resposta"></form>
+
+
+        </section>
+        <!-- pergunta 3:senha -->
+        <section>
+            <h2>Pergunta 3: escreva um exemplo de senha forte</h2>
+            <!-- tipo password nao deixa ver o que esta sendo escrito na tela, fica apenas os asteriscos. -->
+            <form><input type="password" name=Pergunta3" id="P3" placeholder="Digite uma Senha"></form>
+        </section>
+        <!-- pergunta 4: data -->
+        <section>
+            <h2>
+                <h2>Pergunta 4: Em que ano o HTML lançou sua primeira versão</h2>
+                <!-- tipo data, abre um calendario para selecionar uma data com mais facilidade. -->
+                <form><input type="date" name="pergunta4" id="P4"></form>
+            </h2>
+        </section>
+        <!-- pergunta 5: seleção múltipla -->
+        <section>
+            <h2>
+                Pergunta 5: Quais dessas Tecnologias são consideradas um alinguagem de programação
+            </h2>
+            <!-- tipo checkbox escolha multipla -->
+            <form>
+                <input type="checkbox" name="Pergunta5a" id="P5a" value="Javascript">
+                <label for="P5a">Javascript</label><br>
+
+                <input type="checkbox" name="Pergunta5b" id="P5b" value="HTML">
+                <label for="P5b">HTML</label><br>
+
+                <input type="checkbox" name="Pergunta5c" id="P5c" value="CSS">
+                <label for="P5c">CSS</label><br>
+
+                <input type="checkbox" name="Pergunta5d" id="P5d" value="Python">
+                <label for="P5d">Python</label><br>
+            </form>
+
+        </section>
+        <!-- pergunta 6: upload de arquivo -->
+        <section>
+            <h2>faça um upload de um arquivo HTML</h2>
+            <!-- tipo file, o usuario escolhe um arquivo -->
+            <form>
+                <input type="file" name="Pergunta6" id="P6">
+            </form>
+        </section>
+        <!-- pergunta 7: menu suspenso -->
+        <section>
+            <h2>
+                Pergunta 7: Selecione o atributo do input que define o seu tipo:
+            </h2>
+            <!-- utiliza o option ao inves de input, e tipo uma combobox, dentro do select voce usa as option -->
+            <form>
+                <select name="Pergunta 7" id="P7">
+                    <option value="id">id</option>
+                    <option value="type">type</option>
+                    <option value="placeholder">placeholder</option>
+                </select>
+            </form>
+        </section>
+        <!-- pergunta 8: Imagem -->
+        <section>
+            <h2>
+                Pergunta 8: Qual linguagem de Programação é representada pelo logotipo abaixo?
+                <figure><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="logotipo"><br>
+                    <caption>
+                        Logotipo de uma Linguagem de Programação
+                    </caption>
+                </figure>
+                <input type="text" name="Pergunta 8" id="P8" placeholder="Digite sua resposta">
+            </h2>
+            <!-- pergunta com imagem, e input tipo text para a resposta do usuario, tag figure e para deixar uma legenda a imagem, tipo de prova assim, e caption e a mensagem em si. -->
+
+        </section>
+        <!-- tabela de pontuação -->
+        <section>
+            <h2>
+                Tabela de Pontuação
+            </h2>
+            <!-- tag table, e utilizada como uma tabela, border e uma borda para ficar com mais cara de tabela mesmo, tr seria uma linha dessa tabela, ja td seria uma informação para essa linha. thead seria como o cabeçalho da tabela, th seria um alinha para o cabeçalho, tbody seria o conteúdo do cabeçalho, tfoot rodape. td colspan é o numero de colunas que eu quero ocupar.  -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Pontuação</th>
+                        <th>Avaliação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>0-2</td>
+                        <td>Não desista! cada tentativa e uma oportunidade de aprender.</td>
+                    </tr>
+                    <tr>
+                        <td>3-4</td>
+                        <td>Você ainda precisa melhorar, que tal estudar ,mais sobre programação!</td>
+                    </tr>
+                    <tr>
+                        <td>5-7</td>
+                        <td>bom! seu conhecimento em programação esta satisfatorio.</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Perfeito! Você esta muito bem informado sobre Programação.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Boa sorte na proxima! estude mais para melhorar.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <!-- lista de respotas -->
+        <section>
+            <h2>Verifique suas Respostas</h2>
+            <!-- details serve para a pessoa ver o conteudo apenas quando clicar na setinha, summary e para mudar o nome ao lado da setinha, ol e li seria a lista e seus itens. -->
+            <details>
+                <summary>Clique aqui para ver as respostas do quiz!</summary>
+                <ol>
+                    <li>HTML</li>
+                    <li>Domínio</li>
+                    <li>abh38#hd3</li>
+                    <li>1991</li>
+                    <li>Java, Javascript</li>
+                    <li>Arquivo deve ter extensão .html</li>
+                    <li>type</li>
+                    <li>Java</li>
+                </ol>
+            </details>
+        </section>
+        <!-- Formulario de feedback -->
+        <section>
+            <h2>Nos dê o seu feedback</h2>
+            <!-- textarea seria uma area feita para comentarios assim como o type email, os rows seriam as linhas da caixa dos comentarios, e cols as colunas, fieldset uma area para um formulario mais bonito, legend e a legenda do fieldset. -->
+            <form>
+                <fieldset>
+                    <legend>Informações para contato</legend>
+                    <label for="Nomeuser">Digite aqui o seu nome:</label>
+                    <input type="text" name="NomedaPessoa" id="Nomeuser"><br><br>
+
+                    <label for="Emailuser">Digite seu e-mail:</label>
+                    <input type="email" name="Emailpessoa" id="Emailuser"><br><br>
+
+                    <label for="Comentarios">Comentários:</label><br>
+                    <textarea name="comentarios" id="Comentarios" rows="3" cols="50"
+                        placeholder="Digite seus comentários aqui">
+                    </textarea>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- &copy e o simbolo de copyright, palavras como link tag a, target blank faz abrir outra página ao clicar no link. -->
+        <p>
+            &copy; Quiz de programadores. Todos os direitos Reservados 
+        </p>
+        <p>
+            Para ver outros quizzes <a href="paginaaula.html" target="_blank">clique aqui</a>
+        </p>
+    </footer>
+</body>
+
+</html>
