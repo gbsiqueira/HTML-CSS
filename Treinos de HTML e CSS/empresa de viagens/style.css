@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'inter', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#topo {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#topo ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#menu {
+    width: 700px;
+}
+
+#logotipo svg {
+    width: 30px;
+    height: 30px;
+    /* mudar cor do icone */
+    fill: blue;
+}
+
+
+
+#botoes {
+    width: 300px;
+    display: flex;
+    gap: 40px;
+    justify-content: end;
+}
+
+#logotipo {
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn {
+    width: fit-content;
+    cursor: pointer;
+    background-color: #0000ff;
+    border: #0000ff solid 2px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 5px 5px;
+}
+
+.btn:first-child {
+
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000000;
+
+}
+
+
+
+#banner {
+    background: #333 url(https://img.magnific.com/fotos-gratis/belas-paisagens-naturais_23-2151922786.jpg) center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 80px 0 60px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+#conteudobanner {
+    width: 600px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    gap: 15px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 25px;
+}
+
+#conteudobanner a {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+#espec {
+
+    width: 100%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3f3f3;
+    font-size: 20px
+}
+
+#espec svg {
+    width: 45px;
+    height: 45px;
+    fill: #0000ff;
+}
+
+
+.especs {
+    width: 400px;
+
+}
+
+.especs p {
+    font-size: 17px;
+}
+
+#titulo {
+    text-align: center;
+    padding: 70px 0 30px 0;
+
+}
+
+#titulo h2 {
+    font-size: 35px;
+}
+
+#lugaresid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.imagemlocais img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.locaisclass p {
+    font-size: 13px;
+}
+
+#lugaresid svg {
+    fill: #ffff00;
+}
+
+#lugaresid h4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudolocais span {
+    display: flex;
+    padding: 3px;
+}
+
+
+#botavertodos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+#btnvertodos {
+    padding: 5px 10px;
+    width: fit-content;
+    height: 30px;
+    border: #000 solid 1px;
+    color: #0000ff;
+    border-radius: 8px;
+
+}
+
+#rodape {
+    background-color: #03034d;
+    margin-top: 30px;
+    padding-top: 20px;
+    color: #fff;
+}
+
+#partedecimafooter svg {
+    fill: #c37aff;
+    width: 40px;
+    height: 40px;
+}
+
+#partedecimafooter {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+#rodape h4 {
+    font-size: 18px;
+}
+
+#partedecimafooter p {
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+#email {
+    width: 200px;
+    height: 38px;
+    border-radius: 8px;
+    border: #fff solid 2px;
+}
+
+form {
+    display: flex;
+    gap: 15px;
+    height: 40px;
+}
+
+.btn:last-child {
+    height: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #acacac;
+}
+
+#afooter {
+    color: #fff;
+}
+
+#aviaofooter {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+}
+
+#partedebaixofooter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+#h4epsvg {
+    display: flex;
+    gap: 15px;
+}
+
+#divtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 7px;
+}
+
+#partedebaixofooter p {
+    font-size: 12px;
+}
+
+.icon {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+}
+
+#tripwayicons {
+    display: flex;
+    gap: 10px;
+}
+
+#footertripway {
+    width: 150px;
+}
+
+#informacoesfooterbaixo {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#suporte {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contato
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.iconcontato 
+{
+    width: 18px;
+    height: 18px;
+}
+
+.iconctt
+{
+    display: flex;
+    gap: 8px;
+    fill: #fff;
+}
+
+#Endereço
+{
+    line-height: 20px;
+}
+
+#copy
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#copy p
+{
+    font-size: 14px;
+}
