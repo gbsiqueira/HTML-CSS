@@ -7,7 +7,7 @@ Repositório criado para organizar meus exercícios e aprendizados do curso de *
 * **HTML5**: Marcação de conteúdo.
 * **CSS3**: Estilização e layout.
 * **VS Code**: Editor de código.
-* **GitHub Desktop**: Gerenciamento de versão.
+* **Git**: Gerenciamento de versão.
 
 ---
 
