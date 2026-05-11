@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* aplicar o padding sem mexer no widht dos elementos */
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  /* mudando a fonte do corpo */
+  font-family: 'poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'kanit', sans-serif;
+}
+
+/* CLASSES GERAIS */
+.container {
+  width: 98%;
+  /* nunca vai pode passar de 1200, vai ser o maximo */
+  max-width: 1200px;
+  /* altura automatica */
+  height: auto;
+  /* centralizar na tela */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.degrade {
+  /* PARA AS LETRAS/PALAVRAS */
+  /* o gradiente */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  /* recortar e deixar apenas nas letras */
+  background-clip: text;
+  /* segunda maneira pois em alguns navegadores pode bugar */
+  -webkit-background-clip: text;
+  /* cor de preenchimento do texto, deixar transparente */
+  -webkit-text-fill-color: transparent;
+}
+
+/* CABEÇALHO */
+#topo {
+  /* ocupa todo o tamanho */
+  width: 100%;
+  /* espaçar mais em cima */
+  padding: 10px;
+  /* fazer o banner passar por tras dos menus */
+  position: fixed;
+}
+
+#logo a {
+  font-family: 'kanit', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.btnmenu {
+  width: 45px;
+  height: 45px;
+  /* SO PRA VER ONDE ESTÁ O ELEMENTO */
+  /* background-color: #f00; */
+  position: absolute;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* COLOCAR O MENU NA FRENTE QUANDO APERTAR NELE */
+  z-index: 1;
+}
+
+.menu-hamburguer {
+  width: 35px;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  position: relative;
+}
+
+/* ANTES E DEPOIS, SEMPRE VAI O CONTENT DENTRO */
+.menu-hamburguer::after,
+.menu-hamburguer::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.menu-hamburguer::after {
+  bottom: 10px;
+}
+
+.menu-hamburguer::before {
+  top: 10px;
+}
+
+#navegacao {
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  position: fixed;
+  width: 100%;
+  /* ENCOSTAR EM CIMA */
+  top: 0;
+  /* ENCOSTAR NA ESQUERDA */
+  right: 0;
+  /* GARANTIR QUE ELE VAI OCUPAR 100% DA ALTURA DA TELA DO DISPOSITIVO QUE ESTÁ SENDO ACESSADO */
+  height: 100dvh;
+  /* CENTRALIZAR OS ITENS NO MEIO DA TELA */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  /* DEIXAR OCULTA */
+  transform: translateX(100%);
+  /* NAO DEIXAR CLICAR NO ELEMENTO ENQUANTO ELE ESTIVER OCULTO */
+  pointer-events: none;
+  /* SUAVISAR A TRANSIÇÃO DELE APARECER, O PONTO E PORQUE E 5ms*/
+  transition: all .5s;
+}
+
+#navegacao.open {
+  /* VOLTAR A TELA */
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.linkmenu {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+
+
+#topo nav {
+  display: flex;
+  /* jogar o menu para o lado direito */
+  justify-content: space-between;
+  /* colocar na mesma linha */
+  align-items: center;
+}
+
+#topo .container {
+  position: relative;
+}
+
+
+/* BANNER */
+
+#banner {
+  /* a cor para criar o efeito de sobreposição */
+  /* center centraliza na horizontal */
+  /* chama background que da para chamar varias propriedades de uma vez */
+  /* url chama imagem */
+  background: #333 url(../../assets/img/banner.jpg) center;
+  /* imagem preencher o elemento completamente */
+  background-size: cover;
+  /* mesclar cor e imagem */
+  background-blend-mode: overlay;
+  padding: 150px 0 60px;
+  text-align: center;
+}
+
+#banner h1 {
+  /* color: #fff; COMENTEI POR CAUSA DO GRADIENTE/DEGRADE */
+  text-transform: uppercase;
+  font-size: 35px;
+  /* ajustar o espaçamento da linha da frase, ideal usar do tmanho da fonte  */
+  line-height: 35px;
+  /* dar o espaçamento, pro botão de baixo não ficar muito colado */
+  margin-bottom: 30px;
+}
+
+.btn {
+  /* EM UMA IMAGEM */
+  /* deixar meio que um degrade nas cores */
+  /* deg controla o angulo que seu gradient começa */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  /* o tamanho depende do conteudo que tem dentro do botão */
+  width: fit-content;
+  /* espaçamento para não fcar muito colado */
+  padding: 10px 20px;
+  border-radius: 8px;
+  /* centralizar o botão */
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tem que ficar no final */
+/* com esse tamanho ele ignora os outros comandos css, e passa a obedecer o que esta nas chaves */
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+
+  /* Cabeçalho */
+  .btnmenu
+  {
+    display: none;
+  }
+
+  #navegacao
+  {
+    transform: initial;
+    height: initial;
+    width: initial;
+    background: transparent;
+    flex-direction: row;
+  }
+
+  .linkmenu
+  {
+    font-size: 16px;
+  }
+
+  /* BANNER */
+  #banner h1 {
+    font-size: 75px;
+    /* espaçamento entre a linha da frase */
+    line-height: 75px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+
+  /* BANNER */
+  #banner h1 {
+    font-size: 96px;
+    /* espaçamento entre a linha da frase */
+    line-height: 96px;
+  }
+}
