@@ -1,368 +1,398 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'inter', sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* aplicar o padding sem mexer no widht dos elementos */
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-a {
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  /* mudando a fonte do corpo */
+  font-family: 'poppins', sans-serif;
 }
 
-.principal {
-    width: 1200px;
-    height: auto;
-    margin: 0 auto;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'kanit', sans-serif;
 }
 
-#topo {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
-}
-
-#topo ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-#menu {
-    width: 700px;
-}
-
-#logotipo svg {
-    width: 30px;
-    height: 30px;
-    /* mudar cor do icone */
-    fill: blue;
-}
-
-
-
-#botoes {
-    width: 300px;
-    display: flex;
-    gap: 40px;
-    justify-content: end;
-}
-
-#logotipo {
-    width: 200px;
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-}
-
-.btn {
-    width: fit-content;
-    cursor: pointer;
-    background-color: #0000ff;
-    border: #0000ff solid 2px;
-    border-radius: 8px;
-    font-weight: 600;
-    color: #ffffff;
-    padding: 5px 5px;
-}
-
-.btn:first-child {
-
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #000000;
-
-}
-
-
-
-#banner {
-    background: #333 url(https://img.magnific.com/fotos-gratis/belas-paisagens-naturais_23-2151922786.jpg) center;
-    background-size: cover;
-    background-blend-mode: overlay;
-    padding: 80px 0 60px;
-    margin-top: 20px;
-    align-items: flex-start;
-}
-
-#conteudobanner {
-    width: 600px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding-left: 40px;
-    gap: 15px;
-}
-
-h2 {
-    font-size: 50px;
+img {
+  width: 100%;
+  height: 100%;
+  /* a imagem fica em 100% da caixa que ela estiver dentro */
+  object-fit: cover;
+  /* posição no centro  */
+  object-position: center;
 }
 
 p {
-    font-size: 25px;
+  color: #8a8a8a;
 }
 
-#conteudobanner a {
-    font-size: 20px;
-    padding: 5px 5px;
+h2 {
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 16px;
 }
 
-#espec {
-
-    width: 100%;
-    height: 200px;
-    display: flex;
-    text-align: center;
-    gap: 10px;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f3f3f3;
-    font-size: 20px
+/* detalhe roxo em cima dos h2 */
+h2::before {
+  /* precisa do content assim */
+  content: '';
+  width: 50px;
+  height: 5px;
+  /* o gradiente */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  /* fazer ele aparecer */
+  display: block;
+  margin: 0 auto 20px;
 }
 
-#espec svg {
-    width: 45px;
-    height: 45px;
-    fill: #0000ff;
+/* CLASSES GERAIS */
+.container {
+  width: 98%;
+  /* nunca vai pode passar de 1200, vai ser o maximo */
+  max-width: 1200px;
+  /* altura automatica */
+  height: auto;
+  /* centralizar na tela */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.especs {
-    width: 400px;
-
+.degrade, .fixed-scroll #logo a {
+  /* PARA AS LETRAS/PALAVRAS */
+  /* o gradiente */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  /* recortar e deixar apenas nas letras */
+  background-clip: text;
+  /* segunda maneira pois em alguns navegadores pode bugar */
+  -webkit-background-clip: text;
+  /* cor de preenchimento do texto, deixar transparente */
+  -webkit-text-fill-color: transparent;
 }
 
-.especs p {
-    font-size: 17px;
+.fixed-scroll
+{
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #8a8a8a;
 }
 
-#titulo {
-    text-align: center;
-    padding: 70px 0 30px 0;
-
+.fixed-scroll .menu-hamburguer, .fixed-scroll .menu-hamburguer::after, .fixed-scroll .menu-hamburguer::before
+{
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
 }
 
-#titulo h2 {
-    font-size: 35px;
+/* CABEÇALHO */
+#topo {
+  /* ocupa todo o tamanho */
+  width: 100%;
+  /* espaçar mais em cima */
+  padding: 10px;
+  /* fazer o banner passar por tras dos menus */
+  position: fixed;
 }
 
-#lugaresid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding-top: 20px;
-}
-
-.imagemlocais img {
-    width: 300px;
-    height: 200px;
-    border-radius: 8px;
-    padding-bottom: 5px;
-    cursor: pointer;
-}
-
-.locaisclass p {
-    font-size: 13px;
-}
-
-#lugaresid svg {
-    fill: #ffff00;
-}
-
-#lugaresid h4 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.conteudolocais span {
-    display: flex;
-    padding: 3px;
+#logo a {
+  font-family: 'kanit', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
 }
 
 
-#botavertodos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
 
+.btnmenu {
+  width: 45px;
+  height: 45px;
+  /* SO PRA VER ONDE ESTÁ O ELEMENTO */
+  /* background-color: #f00; */
+  position: absolute;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* COLOCAR O MENU NA FRENTE QUANDO APERTAR NELE */
+  z-index: 1;
 }
 
-#btnvertodos {
-    padding: 5px 10px;
-    width: fit-content;
-    height: 30px;
-    border: #000 solid 1px;
-    color: #0000ff;
-    border-radius: 8px;
-
+.menu-hamburguer {
+  width: 35px;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  position: relative;
 }
 
-#rodape {
-    background-color: #03034d;
-    margin-top: 30px;
-    padding-top: 20px;
-    color: #fff;
+/* ANTES E DEPOIS, SEMPRE VAI O CONTENT DENTRO */
+.menu-hamburguer::after,
+.menu-hamburguer::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
 }
 
-#partedecimafooter svg {
-    fill: #c37aff;
-    width: 40px;
-    height: 40px;
+.menu-hamburguer::after {
+  bottom: 10px;
 }
 
-#partedecimafooter {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-bottom: 15px;
-}
-
-#rodape h4 {
-    font-size: 18px;
-}
-
-#partedecimafooter p {
-    font-size: 17px;
-    padding-top: 5px;
-}
-
-#email {
-    width: 200px;
-    height: 38px;
-    border-radius: 8px;
-    border: #fff solid 2px;
-}
-
-form {
-    display: flex;
-    gap: 15px;
-    height: 40px;
-}
-
-.btn:last-child {
-    height: 100%;
-}
-
-hr {
-    border: none;
-    border-top: 2px solid #acacac;
-}
-
-#afooter {
-    color: #fff;
-}
-
-#aviaofooter {
-    width: 30px;
-    height: 30px;
-    fill: #fff;
-}
-
-#partedebaixofooter {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 15px;
-}
-
-#h4epsvg {
-    display: flex;
-    gap: 15px;
-}
-
-#divtitulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 7px;
-}
-
-#partedebaixofooter p {
-    font-size: 12px;
-}
-
-.icon {
-    fill: #fff;
-    width: 30px;
-    height: 30px;
-    margin-top: 7px;
-}
-
-#tripwayicons {
-    display: flex;
-    gap: 10px;
-}
-
-#footertripway {
-    width: 150px;
-}
-
-#informacoesfooterbaixo {
-    width: 800px;
-    display: flex;
-    justify-content: space-between;
+.menu-hamburguer::before {
+  top: 10px;
 }
 
 #navegacao {
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  position: fixed;
+  width: 100%;
+  /* ENCOSTAR EM CIMA */
+  top: 0;
+  /* ENCOSTAR NA ESQUERDA */
+  right: 0;
+  /* GARANTIR QUE ELE VAI OCUPAR 100% DA ALTURA DA TELA DO DISPOSITIVO QUE ESTÁ SENDO ACESSADO */
+  height: 100dvh;
+  /* CENTRALIZAR OS ITENS NO MEIO DA TELA */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  /* DEIXAR OCULTA */
+  transform: translateX(100%);
+  /* NAO DEIXAR CLICAR NO ELEMENTO ENQUANTO ELE ESTIVER OCULTO */
+  pointer-events: none;
+  /* SUAVISAR A TRANSIÇÃO DELE APARECER, O PONTO E PORQUE E 5ms*/
+  transition: all .5s;
+}
+
+#navegacao.open {
+  /* VOLTAR A TELA */
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.linkmenu {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+
+
+#topo nav {
+  display: flex;
+  /* jogar o menu para o lado direito */
+  justify-content: space-between;
+  /* colocar na mesma linha */
+  align-items: center;
+  width: 100%;
+}
+
+#topo .container {
+  position: relative;
+}
+
+
+/* BANNER */
+
+#banner {
+  /* a cor para criar o efeito de sobreposição */
+  /* center centraliza na horizontal */
+  /* chama background que da para chamar varias propriedades de uma vez */
+  /* url chama imagem */
+  background: #333 url(../../assets/img/banner.jpg) center;
+  /* imagem preencher o elemento completamente */
+  background-size: cover;
+  /* mesclar cor e imagem */
+  background-blend-mode: overlay;
+  padding: 150px 0 60px;
+  text-align: center;
+}
+
+#banner h1 {
+  /* color: #fff; COMENTEI POR CAUSA DO GRADIENTE/DEGRADE */
+  text-transform: uppercase;
+  font-size: 35px;
+  /* ajustar o espaçamento da linha da frase, ideal usar do tmanho da fonte  */
+  line-height: 35px;
+  /* dar o espaçamento, pro botão de baixo não ficar muito colado */
+  margin-bottom: 30px;
+}
+
+.btn {
+  /* EM UMA IMAGEM */
+  /* deixar meio que um degrade nas cores */
+  /* deg controla o angulo que seu gradient começa */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  /* o tamanho depende do conteudo que tem dentro do botão */
+  width: fit-content;
+  /* espaçamento para não fcar muito colado */
+  padding: 10px 20px;
+  border-radius: 8px;
+  /* centralizar o botão */
+  margin: 0 auto;
+}
+
+
+/* SOBRE */
+
+#sobre {
+  /* das espaçamento entre seções */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.info-box,
+.imagem-box {
+  margin-top: 40px;
+}
+
+.icone {
+  font-size: 40px;
+}
+
+.info-box h4 {
+  font-size: 20px;
+}
+
+/* sombra na imagem */
+.imagem-box img {
+  box-shadow: 10px 10px 0 #cd9ffa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tem que ficar no final */
+/* com esse tamanho ele ignora os outros comandos css, e passa a obedecer o que esta nas chaves */
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+
+  /* Cabeçalho */
+  .btnmenu {
+    display: none;
+  }
+
+  #navegacao {
+    transform: initial;
+    height: initial;
+    width: initial;
+    background: transparent;
+    flex-direction: row;
+    position: initial;
+  }
+
+  .linkmenu {
+    font-size: 16px;
+  }
+
+  /* BANNER */
+  #banner h1 {
+    font-size: 75px;
+    /* espaçamento entre a linha da frase */
+    line-height: 75px;
+  }
+
+  .fixed-scroll .linkmenu:hover
+  {
+    color: #7a60ff;
+  }
+
+    .fixed-scroll .linkmenu
+  {
+    color: #333;
+  }
+
+  
+
+
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+  /* BANNER */
+  #banner h1 {
+    font-size: 96px;
+    /* espaçamento entre a linha da frase */
+    line-height: 96px;
+  }
+
+  /* detalhe roxo em cima dos h2 */
+  h2::before {
+    /* precisa do content assim */
+    content: '';
+    width: 50px;
+    height: 5px;
+    /* o gradiente */
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+    /* fazer ele aparecer */
+    display: block;
+    margin: 0 0 20px 0;
+  }
+
+  #sobre .container {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    flex-direction: row;
+    gap: 15px;
+  }
 
-#suporte {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#contato
-{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.iconcontato 
-{
-    width: 18px;
-    height: 18px;
-}
-
-.iconctt
-{
-    display: flex;
-    gap: 8px;
-    fill: #fff;
-}
-
-#Endereço
-{
-    line-height: 20px;
-}
-
-#copy
-{
-    width: 100%;
+  .imagem-box {
+    width: 50%;
+    height: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
+    margin: 0;
+  }
 
-#copy p
-{
-    font-size: 14px;
+  .texto-box {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+  }
+
+  .info-box {
+    display: flex;
+    gap: 15px;
+  }
+
+
 }
