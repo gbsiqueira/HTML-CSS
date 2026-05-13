@@ -21,6 +21,38 @@ h6 {
   font-family: 'kanit', sans-serif;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  /* a imagem fica em 100% da caixa que ela estiver dentro */
+  object-fit: cover;
+  /* posição no centro  */
+  object-position: center;
+}
+
+p {
+  color: #8a8a8a;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 16px;
+}
+
+/* detalhe roxo em cima dos h2 */
+h2::before {
+  /* precisa do content assim */
+  content: '';
+  width: 50px;
+  height: 5px;
+  /* o gradiente */
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+  /* fazer ele aparecer */
+  display: block;
+  margin: 0 auto 20px;
+}
+
 /* CLASSES GERAIS */
 .container {
   width: 98%;
@@ -35,7 +67,8 @@ h6 {
   flex-direction: column;
 }
 
-.degrade {
+.degrade,
+.fixed-scroll #logo a {
   /* PARA AS LETRAS/PALAVRAS */
   /* o gradiente */
   background: linear-gradient(45deg, #7a60ff, #cd9ffa);
@@ -47,6 +80,17 @@ h6 {
   -webkit-text-fill-color: transparent;
 }
 
+.fixed-scroll {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #8a8a8a;
+}
+
+.fixed-scroll .menu-hamburguer,
+.fixed-scroll .menu-hamburguer::after,
+.fixed-scroll .menu-hamburguer::before {
+  background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+}
+
 /* CABEÇALHO */
 #topo {
   /* ocupa todo o tamanho */
@@ -55,6 +99,8 @@ h6 {
   padding: 10px;
   /* fazer o banner passar por tras dos menus */
   position: fixed;
+  /* deixar ele na frente de tudo */
+  z-index: 99;
 }
 
 #logo a {
@@ -65,6 +111,8 @@ h6 {
   text-align: center;
   color: #fff;
 }
+
+
 
 .btnmenu {
   width: 45px;
@@ -149,6 +197,7 @@ h6 {
   justify-content: space-between;
   /* colocar na mesma linha */
   align-items: center;
+  width: 100%;
 }
 
 #topo .container {
@@ -198,36 +247,116 @@ h6 {
   border-radius: 8px;
   /* centralizar o botão */
   margin: 0 auto;
+  /* Obedecer o tamanho da div que ele esta */
+  display: block;
+}
+
+
+/* SOBRE */
+
+#sobre {
+  /* das espaçamento entre seções */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.info-box,
+.imagem-box {
+  margin-top: 40px;
+}
+
+.icone {
+  font-size: 40px;
+}
+
+.info-box h4 {
+  font-size: 20px;
+}
+
+/* sombra na imagem */
+.imagem-box img {
+  box-shadow: 10px 10px 0 #cd9ffa;
 }
 
 
 
 
+/* SERVIÇOS */
+
+#servicos {
+  padding: 50px 0;
+  text-align: center;
+  background: #f2f2f2;
+}
 
 
+#servicos .btn {
+  margin-top: 20px;
+}
+
+.servico-card {
+  display: block;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
+  margin-top: 40px;
+  padding: 50px 20px;
+  position: relative;
+}
+
+/* Detalhe no primeiro card */
+.servico-card:first-child::before {
+  content: '';
+  width: 50%;
+  height: 50%;
+  border-top: 10px solid #7a60ff;
+  border-left: 10px solid #7a60ff;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+/* Detalhe no ultimo card */
+.servico-card:last-child::after {
+  content: '';
+  width: 50%;
+  height: 50%;
+  border-bottom: 10px solid #7a60ff;
+  border-right: 10px solid #7a60ff;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+
+.servico-card i {
+  font-size: 40px;
+}
+
+.servico-card h3 {
+  color: #000;
+  font-size: 22px;
+  padding-top: 10px;
+
+}
 
 
+.btn-icon i {
+  font-size: 16px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* circulo em volta da setinha */
+.btn-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #8a8a8a;
+  color: #8a8a8a;
+  margin: 15px auto 0;
+  border-radius: 50%;
+}
 
 
 
@@ -242,22 +371,20 @@ h6 {
 @media (min-width: 768px) {
 
   /* Cabeçalho */
-  .btnmenu
-  {
+  .btnmenu {
     display: none;
   }
 
-  #navegacao
-  {
+  #navegacao {
     transform: initial;
     height: initial;
     width: initial;
     background: transparent;
     flex-direction: row;
+    position: initial;
   }
 
-  .linkmenu
-  {
+  .linkmenu {
     font-size: 16px;
   }
 
@@ -268,7 +395,29 @@ h6 {
     line-height: 75px;
   }
 
+  .fixed-scroll .linkmenu:hover {
+    color: #7a60ff;
+  }
+
+  .fixed-scroll .linkmenu {
+    color: #333;
+  }
+
+  /* SERVIÇOS */
+  .servico-card
+  {
+    width: 48%;
+  }
+
+  .cards
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
 }
+
 
 
 @media (min-width: 1200px) {
@@ -278,5 +427,60 @@ h6 {
     font-size: 96px;
     /* espaçamento entre a linha da frase */
     line-height: 96px;
+  }
+
+  /* detalhe roxo em cima dos h2 */
+  h2::before {
+    /* precisa do content assim */
+    content: '';
+    width: 50px;
+    height: 5px;
+    /* o gradiente */
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+    /* fazer ele aparecer */
+    display: block;
+    margin: 0 0 20px 0;
+  }
+
+  #sobre .container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .imagem-box {
+    width: 50%;
+    height: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .texto-box {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+  }
+
+  .info-box {
+    display: flex;
+    gap: 15px;
+  }
+
+  /* SERVIÇOS */
+  #servicos
+  {
+    text-align: left;
+  }
+
+  .cabecalho
+  {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  .servico-card
+  {
+    width: 31%;
   }
 }
