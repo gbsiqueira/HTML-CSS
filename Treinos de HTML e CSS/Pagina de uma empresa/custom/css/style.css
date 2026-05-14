@@ -359,6 +359,129 @@ h2::before {
 }
 
 
+/* INSTITUCIONAL */
+
+#institucional .imagem-box img
+{
+  box-shadow: -10px 10px 0 #cd9ffa;
+}
+
+
+#institucional h2
+{
+  margin-top: 15px;
+}
+
+#institucional .container
+{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* NOSSA EQUIPE */
+
+#Equipe
+{
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+
+#Equipe h2
+{
+  margin-top: 45px;
+}
+
+
+.divimgmembro
+{
+  width: 200px;
+  height: 200px ;
+  margin: 0 auto;
+}
+
+
+#Equipe .servico-card 
+{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+}
+
+#Equipe img
+{
+  width: 200px;
+  height: 200px;
+  border-radius: 99px;
+}
+
+.especmembro
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#Equipe span
+{
+  width: 100%;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 50px;
+}
+
+
+#Equipe ul
+{
+  display: flex;
+  gap: 10px;
+}
+
+#Equipe li
+{
+  box-shadow: 0 0 10px #ccc;
+}
+
+#Equipe i 
+{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  font-size: 24px;
+}
+
+.lstredes
+{
+  padding-top: 15px;
+}
+
+
+.lstredes
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -416,6 +539,28 @@ h2::before {
     justify-content: space-between;
   }
 
+
+  /* INSTITUCIONAL */
+
+  #institucional
+  {
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -445,18 +590,18 @@ h2::before {
   #sobre .container {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    justify-content: space-between;
   }
 
   .imagem-box {
-    width: 50%;
+    width: 48%;
     height: 100%;
     height: auto;
     margin: 0;
   }
 
   .texto-box {
-    width: 50%;
+    width: 48%;
     height: 100%;
     text-align: left;
   }
@@ -483,4 +628,37 @@ h2::before {
   {
     width: 31%;
   }
+
+  #servicos .servico-card:hover
+  {
+     transition: transform 0.3s ease-in-out; 
+     transform: scale(1.1); 
+     background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+     color: #fff;
+  }
+
+
+   #servicos.servico-card:hover p, #servicos .servico-card:hover h3, #servicos .servico-card:hover .btn-icon
+  {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+ /* INSTITUCIONAL */
+  #institucional .container
+  {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-top: 50px;
+  }
+
+  /* NOSSA EQUIPE */
+
+  #Equipe .cabecalho
+  {
+    text-align: left;
+  }
+  
+
 }
