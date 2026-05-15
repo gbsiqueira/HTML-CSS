@@ -10,6 +10,7 @@
 body {
   /* mudando a fonte do corpo */
   font-family: 'poppins', sans-serif;
+  
 }
 
 h1,
@@ -114,6 +115,7 @@ h2::before {
 
 
 
+
 .btnmenu {
   width: 45px;
   height: 45px;
@@ -127,6 +129,15 @@ h2::before {
   /* COLOCAR O MENU NA FRENTE QUANDO APERTAR NELE */
   z-index: 1;
 }
+
+  .texto-box
+  {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 .menu-hamburguer {
   width: 35px;
@@ -254,7 +265,8 @@ h2::before {
 
 /* SOBRE */
 
-#sobre {
+#sobre,
+#contato {
   /* das espaçamento entre seções */
   padding: 50px 0;
   text-align: center;
@@ -361,49 +373,42 @@ h2::before {
 
 /* INSTITUCIONAL */
 
-#institucional .imagem-box img
-{
+#institucional .imagem-box img {
   box-shadow: -10px 10px 0 #cd9ffa;
 }
 
 
-#institucional h2
-{
-  margin-top: 15px;
+#institucional h2 {
+  margin-top: 30px;
 }
 
-#institucional .container
-{
+#institucional .container {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 
 /* NOSSA EQUIPE */
 
-#Equipe
-{
+#Equipe {
   text-align: center;
   background-color: #f2f2f2;
 }
 
 
-#Equipe h2
-{
+#Equipe h2 {
   margin-top: 45px;
 }
 
 
-.divimgmembro
-{
+.divimgmembro {
   width: 200px;
-  height: 200px ;
+  height: 200px;
   margin: 0 auto;
 }
 
 
-#Equipe .servico-card 
-{
+#Equipe .servico-card {
   height: auto;
   display: flex;
   flex-direction: column;
@@ -411,22 +416,19 @@ h2::before {
   font-size: 14px;
 }
 
-#Equipe img
-{
+#Equipe img {
   width: 200px;
   height: 200px;
   border-radius: 99px;
 }
 
-.especmembro
-{
+.especmembro {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-#Equipe span
-{
+#Equipe span {
   width: 100%;
   color: #000;
   border: 2px solid #000;
@@ -434,38 +436,216 @@ h2::before {
 }
 
 
-#Equipe ul
-{
+#Equipe ul {
   display: flex;
   gap: 10px;
 }
 
-#Equipe li
-{
+#Equipe li {
   box-shadow: 0 0 10px #ccc;
 }
 
-#Equipe i 
-{
+#Equipe i {
   width: 40px;
   height: 40px;
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
   font-size: 24px;
 }
 
-.lstredes
-{
+#Equipe .container {
+  padding-bottom: 100px;
+}
+
+.lstredes {
   padding-top: 15px;
 }
 
 
-.lstredes
-{
+.lstredes {
   display: flex;
   justify-content: space-around;
 }
+
+
+/* CONTATO */
+
+
+#contato input,
+#contato textarea {
+  height: 50px;
+  width: 90%;
+  border: 1px solid #8a8a8a;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+#contato textarea {
+  height: 100px;
+}
+
+
+
+#contato form {
+  margin-top: 40px;
+}
+
+#contato .btn {
+  border: none;
+}
+
+#contato .container {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+
+/* FOOTER */
+
+
+#rodape {
+  height: auto;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+
+#rodape .container {
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+#rodape ul {
+  display: flex;
+
+}
+
+#rodape .lstredes i,
+#rodape #logo i, #logo a{
+  font-size: 30px;
+}
+
+
+
+
+#rodape .info-box,
+#rodape .info-box p,
+#rodape .info-box a,
+#rodape .texto,
+#colunas-info i {
+  color: #fff;
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+}
+
+
+
+#rodape .info-box p,#colunas-info i,
+#rodape .info-box a
+{
+  color: #ccc;
+}
+
+#rodape .icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#rodape .info-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#rodape h4
+{
+  padding-bottom: 19px;
+}
+
+
+
+#copy
+{
+  background-color: #000;
+  height: auto;
+}
+
+#copy .container
+{
+  height: auto;
+  margin: 0;
+  
+}
+
+.copy
+{
+  padding-top: 15px;
+}
+
+.creditos
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+
+
+#rodape #logo a
+{
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -492,6 +672,16 @@ h2::before {
 /* com esse tamanho ele ignora os outros comandos css, e passa a obedecer o que esta nas chaves */
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
+
+ 
+  .texto-box
+  {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   /* Cabeçalho */
   .btnmenu {
@@ -527,13 +717,11 @@ h2::before {
   }
 
   /* SERVIÇOS */
-  .servico-card
-  {
+  .servico-card {
     width: 48%;
   }
 
-  .cards
-  {
+  .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -542,18 +730,34 @@ h2::before {
 
   /* INSTITUCIONAL */
 
-  #institucional
-  {
+  #institucional {
     text-align: center;
   }
 
 
 
+/* RODAPE */
 
+  #rodape #colunas-info
+  {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+  }
 
+  #rodape .logo
+  {
+    width: 48%;
+  }
 
+  .info-box
+  {
+    width: 48%;
+  }
 
-
+  
 
 
 
@@ -566,6 +770,27 @@ h2::before {
 
 
 @media (min-width: 1200px) {
+
+  .texto-box
+{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.icone
+{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.info-box
+{
+  width: 90%;
+}
 
   /* BANNER */
   #banner h1 {
@@ -587,7 +812,8 @@ h2::before {
     margin: 0 0 20px 0;
   }
 
-  #sobre .container {
+  #sobre .container,
+  #contato .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -612,53 +838,107 @@ h2::before {
   }
 
   /* SERVIÇOS */
-  #servicos
-  {
+  #servicos {
     text-align: left;
   }
 
-  .cabecalho
-  {
+  .cabecalho {
     display: flex;
     align-items: end;
     justify-content: space-between;
   }
 
-  .servico-card
-  {
+  .servico-card {
     width: 31%;
   }
 
-  #servicos .servico-card:hover
-  {
-     transition: transform 0.3s ease-in-out; 
-     transform: scale(1.1); 
-     background: linear-gradient(45deg, #7a60ff, #cd9ffa);
-     color: #fff;
-  }
-
-
-   #servicos.servico-card:hover p, #servicos .servico-card:hover h3, #servicos .servico-card:hover .btn-icon
-  {
+  .servico-card:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
     color: #fff;
-    border-color: #fff;
   }
-  
- /* INSTITUCIONAL */
-  #institucional .container
-  {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   margin-top: 50px;
+
+
+  .servico-card:hover h3,
+  .servico-card:hover span,
+  .servico-card:hover p,
+  .servico-card:hover a,
+  .servico-card:hover i,
+  .servico-card:hover .degrade {
+    color: #fff !important;
+  }
+
+  .servico-card:hover .degrade {
+    background: linear-gradient(45deg, #7a60ff, #cd9ffa);
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+  }
+
+  /* INSTITUCIONAL */
+  #institucional .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 70px;
   }
 
   /* NOSSA EQUIPE */
 
-  #Equipe .cabecalho
-  {
+  #Equipe .cabecalho {
     text-align: left;
   }
-  
 
+  /* CONTATO */
+
+  #contato .btn {
+    margin: 15px 0 0;
+    width: fit-content;
+    padding: 10px 30px;
+    height: auto;
+    border-radius: 0;
+  }
+
+  /* RODAPE */
+
+ 
+
+  #colunas-info
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  #rodape .info-box
+  {
+    width: 20%;
+    height: auto;
+  }
+
+  #rodape #colunas-info
+  {
+    margin-bottom: 70px;
+  }
+
+
+ .copy, .creditos
+ {
+  margin: 0;
+  padding: 10px 0;
+ }
+
+  #copy .container
+{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
 }
+  
+}
+
